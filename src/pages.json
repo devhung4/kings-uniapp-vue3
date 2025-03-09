@@ -16,13 +16,13 @@
 		{
 			"path": "pages/public/login",
 			"style": {
-				"navigationBarTitleText": "登錄"
+				"navigationBarTitleText": "用戶登錄"
 			}
 		},
 		{
 			"path": "pages/public/register",
 			"style": {
-				"navigationBarTitleText": "注冊"
+				"navigationBarTitleText": "用戶注冊"
 			}
 		}
 	],

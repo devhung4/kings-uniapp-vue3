@@ -1,20 +1,17 @@
 <template>
-  <view
-    :class="[
-      'w-full min-w-min h-12 rounded-md flex justify-center items-center text-base font-bold',
-      `custom-button__${type}`,
-      `custom-button__${size}`,
-      {
-        'is-disabled': disabled,
-        '': loading,
-      },
-      customClasses,
-    ]"
-    :style="computedStyles"
-    @click="handeClick">
+  <view :class="[
+    'w-full min-w-min h-12 rounded-md flex justify-center items-center text-base font-bold',
+    `custom-button__${type}`,
+    `custom-button__${size}`,
+    {
+      'is-disabled': disabled,
+      '': loading,
+    },
+    customClasses,
+  ]" :style="computedStyles" @click="handeClick">
     <view v-if="loading">
       <!-- <Icon name="mdi:loading" class="animate-spin" /> -->
-      <Icon icon="svg-spinners:tadpole" width="24" height="24" color="#fff" />
+      <!-- <Icon icon="svg-spinners:tadpole" width="24" height="24" color="#fff" /> -->
     </view>
     <template v-else>
       <slot></slot>
@@ -24,7 +21,6 @@
 
 <script lang="ts" setup>
 import { computed, type PropType, type CSSProperties } from 'vue'
-import { Icon } from "@iconify/vue";
 
 type ButtonType = 'primary' | 'danger'
 type ButtonSize = 'normal' | 'large'
@@ -49,7 +45,7 @@ const props = defineProps({
   customClasses: String,
   customStyles: {
     type: Object as PropType<CSSProperties>,
-    default: () => {},
+    default: () => { },
   },
 })
 

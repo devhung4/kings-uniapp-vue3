@@ -51,7 +51,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import Button from '@/components/Button/Button.vue'
+import Button from '@/components/Button.vue'
 import FormField from '@/components/FormField.vue'
 const title = ref('Hello')
 
